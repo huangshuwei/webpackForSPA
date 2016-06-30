@@ -29,10 +29,10 @@ Next you can see the result by different command mode
 `$ npm run build`
 * dev mode:
 `$ npm run dev`
-* dev width HRM mode:
+* dev with HRM mode:
 `$ npm run dev-hrm`
 
-If you use 'dev width HRM mode' ,you should start the node server first(use node server to mock backend server).
+If you use 'dev with HRM mode' ,you should start the node server first(use node server to mock backend server).
 
 `$ cd mockServer` 
 
@@ -59,7 +59,7 @@ If you use 'dev width HRM mode' ,you should start the node server first(use node
 
 **10.Hot Module Replacement(HRM)**
 
-**11.Developing width backend server(like java、C#、nodejs、php)**
+**11.Developing with backend server(like java、C#、nodejs、php)**
 
 **12.Distinguish dev and build**
 
