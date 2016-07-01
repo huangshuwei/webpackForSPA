@@ -332,6 +332,11 @@ var plugins = [
         }
     }),
     new HtmlWebpackPlugin({
+        filename: 'html/hrm.html',
+        template: __dirname + '/src/html/hrm.html',
+        inject: false,
+    }),
+    new HtmlWebpackPlugin({
         filename: 'html/home.html',
         template: __dirname + '/src/html/home.html',
         inject: false,

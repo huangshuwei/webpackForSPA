@@ -93,6 +93,12 @@ function loadJs(jsPath) {
             currentMod.init();
         }, 'home');
     }
+    else if (jsPath === './hrm') {
+        require.ensure([], function (require) {
+            currentMod = require('./hrm');
+            currentMod.init(pageDatas.params);
+        }, 'hrm');
+    }
     else if (jsPath === './menu1') {
         require.ensure([], function (require) {
             currentMod = require('./menu1');
