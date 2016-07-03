@@ -28,7 +28,7 @@ function getServer() {
 
     }else {
 
-        var text = 'if you want test "Hot Module Replacement" with backend server,please make sure you use hrm mode :';
+        var text = 'if you want to test "Hot Module Replacement" with backend server,please make sure to use hrm mode :';
         text +=' <pre>$ npm run dev-hrm</pre>'
 
         $("#serverData").html(text);
