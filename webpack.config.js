@@ -220,10 +220,10 @@ var loaders = [
 
     /*
      * Extract css files
-     * （提取css到单独文件loader）     * */
+     * （提取css到单独文件loader）
+     */
     {
         test: /\.css$/,
-        //loader: "style-loader!css-loader!postcss-loader"
         loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
     },
 
@@ -299,7 +299,7 @@ var plugins = [
     /*
      * extract css
      * （提取css文件到单独的文件中）
-     * */
+     */
     new ExtractTextPlugin(devServer ? "css/[name].css" : "css/[name]-[chunkhash:8].css", {allChunks: true}),
 
 
