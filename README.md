@@ -70,6 +70,7 @@ If you use 'dev with HRM mode' ,you should start the node server first(use node 
 
 
 ##Useful links
+- [the blog about this project](https://huangshuwei.github.io/2016/07/12/webpack%20%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E6%88%98/)
 - [webpack official site](https://webpack.github.io/docs/)
 - [webpack official example](https://github.com/webpack/webpack/tree/master/examples)
 
