@@ -95,6 +95,11 @@ var PATHS = {
      * */
     srcPath: path.resolve(process.cwd(), 'src'),
 
+
+    /*
+    * node_modules path
+    */
+    node_modulesPath: path.resolve('./node_modules'),
 }
 
 
@@ -109,7 +114,9 @@ var resolve = {
     /*
      * The directory (absolute path) that contains your modules
      * */
-    root: [],
+    root: [
+        PATHS.node_modulesPath
+    ],
 
 
     /*
