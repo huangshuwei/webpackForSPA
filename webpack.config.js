@@ -40,7 +40,6 @@ var Merge = require('webpack-merge');
  * */
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-
 /*
  *  Detect how npm is run and branch based on that
  *  （当前 npm 运行）
@@ -261,7 +260,12 @@ var plugins = [
      * common js
      * （公共js）
      * */
-    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"common", /* filename= */"" + (devServer ? 'js/[name].js' : "js/[name]-[chunkhash:8].js"), Infinity),
+    new webpack.optimize.CommonsChunkPlugin(
+        devServer ?
+        {name: "common", filename: "common.js"}:
+        {names: ["common", "webpackAssets"]}
+
+    ),
 
 
     /*
@@ -326,17 +330,17 @@ var plugins = [
         /*
          *add bundle if needed
          * */
-        chunks: ['index', 'common'],
+        /*chunks: ['index', 'common'],*/
         /*
          * 引用模块的加载顺序
          * */
-        chunksSortMode: function (a, b) {
+      /*  chunksSortMode: function (a, b) {
             var order = {'common': 5, 'index': 10},
                 aI = order[a.origins[0].name],
                 bI = order[b.origins[0].name];
             // 从小到大排
             return aI && bI ? aI - bI : 1;
-        }
+        }*/
     }),
     new HtmlWebpackPlugin({
         filename: 'html/hrm.html',
