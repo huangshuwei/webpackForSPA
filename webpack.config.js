@@ -262,11 +262,9 @@ var plugins = [
      * */
     new webpack.optimize.CommonsChunkPlugin(
         devServer ?
-        {name: "common", filename: "common.js"}:
+        {name: "common", filename: "js/common.js"}:
         {names: ["common", "webpackAssets"]}
-
     ),
-
 
     /*
      *  Module (value) is loaded when the identifier (key) is used as free variable in a module
