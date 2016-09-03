@@ -33,7 +33,7 @@
   "scripts": {
     "build": "webpack  --profile --progress --colors --display-error-details",
     "dev": "webpack  --display-modules --profile --progress --colors --display-error-details",
-    "dev-hrm": "webpack-dev-server --config"
+    "dev-hrm": "webpack-dev-server"
   },
   "author": "hsw",
   "license": "ISC"
