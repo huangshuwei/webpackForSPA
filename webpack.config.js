@@ -62,7 +62,6 @@ if (currentTarget == "build") { // online mode （线上模式）
 } else if (currentTarget == "dev-hrm") { // dev HRM mode （热更新模式）
 
     debug = true, devServer = true, minimize = false;
-
 }
 
 
@@ -274,9 +273,7 @@ var plugins = [
         $: "jquery",
         jQuery: "jquery",
         "window.jQuery": "jquery",
-        "_": "underscore",
-
-
+        "_": "underscore"
     }),
 
 
@@ -339,6 +336,14 @@ var plugins = [
             // 从小到大排
             return aI && bI ? aI - bI : 1;
         }*/
+
+
+
+        // 需要依赖的模块
+        chunks: ['common', 'index', 'webpackAssets'],
+
+        // 根据依赖自动排序
+        chunksSortMode: 'dependency'
     }),
     new HtmlWebpackPlugin({
         filename: 'html/hrm.html',
