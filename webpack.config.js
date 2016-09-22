@@ -322,22 +322,6 @@ var plugins = [
          * 'head' will place the scripts in the head element.
          * */
         inject: 'true',
-        /*
-         *add bundle if needed
-         * */
-        /*chunks: ['index', 'common'],*/
-        /*
-         * 引用模块的加载顺序
-         * */
-      /*  chunksSortMode: function (a, b) {
-            var order = {'common': 5, 'index': 10},
-                aI = order[a.origins[0].name],
-                bI = order[b.origins[0].name];
-            // 从小到大排
-            return aI && bI ? aI - bI : 1;
-        }*/
-
-
 
         // 需要依赖的模块
         chunks: ['common', 'index', 'webpackAssets'],
