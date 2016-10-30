@@ -57,7 +57,7 @@ if (currentTarget == "build") { // online mode （线上模式）
 
 } else if (currentTarget == "dev") { // dev mode （开发模式）
 
-    debug = true, devServer = false, minimize = false;
+    debug = false, devServer = false, minimize = false;
 
 } else if (currentTarget == "dev-hrm") { // dev HRM mode （热更新模式）
 
@@ -77,7 +77,7 @@ var PATHS = {
      * publish path
      * （发布目录）
      * */
-    publicPath: debug ? '/webpackForSPA/dist/' : '/webpackForSPA/',
+    publicPath: debug ? '/webpackForSPA/dist/' : './',
 
 
     /*
@@ -229,7 +229,9 @@ var loaders = [
      */
     {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader", {
+            publicPath: '../'
+        })
     },
 
 
